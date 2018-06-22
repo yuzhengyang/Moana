@@ -1,0 +1,19 @@
+﻿<UserControl x:Name="TodayGaugeControl1" x:Class="Moana.Controls.ChartControls.TodayGaugeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Moana.Controls.ChartControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" Width="350" Height="250" Loaded="TodayGaugeControl_Loaded">
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <lvc:Gauge Name="Gauge" Grid.Row="0" From="0" To="100" Value="{Binding GaugeValue}" />
+        <Label Name="TodayTime" Visibility="Collapsed" Content="{Binding TodayTimeContent}" Height="25" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Label Name="Increase" Visibility="Collapsed" Content="{Binding IncreaseContent}" Margin="5" Height="30" HorizontalContentAlignment="Center"/>
+        <Label Name="DailyAverage"  Grid.Row="1" Content="{Binding DailyAverageContent}" Margin="5" Height="30" HorizontalContentAlignment="Center"/>
+    </Grid>
+</UserControl>

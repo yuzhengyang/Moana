@@ -1,0 +1,21 @@
+﻿<UserControl Name="StatusCount" x:Class="Moana.Controls.ChartControls.StatusCountControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Moana.Controls.ChartControls"
+             mc:Ignorable="d" Loaded="StatusCount_Loaded"
+             Background="White" Height="40" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Column="0" Name="LBCareer" Content="总计：00 小时 00 分钟" Height="30" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Column="1" Name="LBMonthCareer" Content="本月：00 小时 00 分钟" Height="30" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Column="2" Name="LBTodayCareer" Content="当天：00 小时 00 分钟" Height="30" FontSize="18" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+    </Grid>
+</UserControl>

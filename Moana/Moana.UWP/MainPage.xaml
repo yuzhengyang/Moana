@@ -1,0 +1,24 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Moana.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:DataVisualization="using:Telerik.UI.Xaml.Controls.DataVisualization"
+    x:Class="Moana.UWP.MainPage"
+    mc:Ignorable="d"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadCartesianChart x:Name="radChart" Margin="20">
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:LineSeries ItemsSource="{Binding}"/>
+        </telerikChart:RadCartesianChart>
+        <Button Name="Refresh" Content="Button" Click="Refresh_Click"/>
+    </Grid>
+</Page>

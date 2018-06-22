@@ -1,0 +1,28 @@
+﻿<Controls:MetroWindow
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Moana.Windows.MainWindows"
+        xmlns:ButtonControls="clr-namespace:Moana.Controls.ButtonControls" x:Class="Moana.Windows.MainWindows.DashboardWindow"
+        mc:Ignorable="d"
+        Title="DashboardWindow" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Button x:Name="BTBaseChart" Content="基础" FontSize="16" Click="BTBaseChart_Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" />
+            <Button x:Name="BTMonthChart" Content="月" FontSize="16" Click="BTMonthChart_Click" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="80" />
+            <Button x:Name="BTYearChart" Content="年" FontSize="16" Click="BTYearChart_Click" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="80" />
+            <Button x:Name="BTSettings" Content="设置" FontSize="16" Click="BTSettings_Click"  HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="80" />
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1" Margin="30">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>
