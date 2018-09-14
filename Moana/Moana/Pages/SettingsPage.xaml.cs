@@ -32,6 +32,7 @@ namespace Moana.Pages
         {
             //IniTool.Set(R.Files.Settings,"Wakatime","ApiKey",);
             ConfigTool.Set("WakaTimeKey", TBWakaTimeKey.Text);
+            R.WakaTimeKey = TBWakaTimeKey.Text;
         }
     }
 }

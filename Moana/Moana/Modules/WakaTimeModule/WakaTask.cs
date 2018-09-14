@@ -15,7 +15,7 @@ namespace Moana.Modules.WakaTimeModule
     {
         public override void BeforeTODO()
         {
-            SetInterval(60 * 60 * 1000);
+            //SetInterval(60 * 60 * 1000);
         }
         public override void TODO()
         {
@@ -30,6 +30,7 @@ namespace Moana.Modules.WakaTimeModule
                     R.Log.v(string.Format("完成同步 WakaTime 数据，日期：{0}，条数：{1}", DateTime.Now.AddDays(-i).ToString("yyyy-MM-dd"), count));
                     Thread.Sleep(30 * 1000);
                 }
+                Thread.Sleep(60 * 60 * 1000);
             }
         }
     }
